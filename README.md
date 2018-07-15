@@ -4,7 +4,7 @@
 
 > A curated list of resources dedicated to Natural Language Processing
 >
-> Maintainers - [Keon](https://github.com/keonkim), [Martin](https://github.com/outpark), [Nirant](https://github.com/NirantK), [Dhruv](https://github.com/the-ethan-hunt)
+> Maintainers - [Keon](https://github.com/keon), [Martin](https://github.com/outpark), [Nirant](https://github.com/NirantK), [Dhruv](https://github.com/the-ethan-hunt)
 
 *Please read the [contribution guidelines](contributing.md) before contributing.*
 
@@ -13,6 +13,7 @@ Please feel free to create [pull requests](https://github.com/keonkim/awesome-nl
 
 ## Contents
 
+ - [Research Summaries and Trends](#research-summaries-and-trends)
  - [Tutorials](#tutorials)
    - [Reading Content](#reading-content)
    - [Videos and Courses](#videos-and-online-courses)
@@ -32,7 +33,7 @@ Please feel free to create [pull requests](https://github.com/keonkim/awesome-nl
    - [Text Embeddings](#text-embeddings)
    - [Thought Vectors](#thought-vectors)
    - [Machine Translation](#machine-translation)
-   - [Single Exchange Dialogs](#single-exchange-dialogs)
+   - [Dialogs and Conversational](#dialogs-and-conversational)
    - [Memory and Attention Models](#memory-and-attention-models)
    - [Named Entity Recognition](#named-entity-recognition)
    - [Natural Language Understanding](#natural-language-understanding)
@@ -40,15 +41,25 @@ Please feel free to create [pull requests](https://github.com/keonkim/awesome-nl
    - [Text Summarization](#text-summarization)
    - [Text Classification](#text-classification)
  - [Datasets](#datasets)
+ - [Implementations of various models](#implementations-of-various-models)
  - [NLP in Korean](#nlp-in-korean)
  - [NLP in Arabic](#nlp-in-arabic)
  - [NLP in Chinese](#nlp-in-chinese)
+ - [NLP in German](#nlp-in-german)
  - [NLP in Spanish](#nlp-in-spanish)
  - [NLP in Indic Languages](#nlp-in-indic-languages)
  - [NLP in Thai](#nlp-in-thai)
+ - [NLP in Vietnamese](#nlp-in-vietnamese)
  - [Other Languages](#other-languages)
  - [Credits](#credits)
 
+
+## Research Summaries and Trends
+* [Four deep learning trends from ACL 2017. Part One: Linguistic Structure and Word Embeddings](http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html)
+* [Four deep learning trends from ACL 2017. Part Two: Interpretability and Attention](http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-2.html)
+* [Highlights of EMNLP 2017: Exciting Datasets, Return of the Clusters, and More!](http://blog.aylien.com/highlights-emnlp-2017-exciting-datasets-return-clusters/)
+* [Deep Learning for Natural Language Processing (NLP): Advancements & Trends](https://tryolabs.com/blog/2017/12/12/deep-learning-for-nlp-advancements-and-trends-in-2017/?utm_campaign=Revue%20newsletter&utm_medium=Newsletter&utm_source=The%20Wild%20Week%20in%20AI)
+* [NLP's ImageNet moment has arrived](https://thegradient.pub/nlp-imagenet/)
 
 ## Tutorials
 [Back to Top](#contents)
@@ -58,21 +69,24 @@ Please feel free to create [pull requests](https://github.com/keonkim/awesome-nl
 General Machine Learning
 * [AI Playbook](http://aiplaybook.a16z.com/) is a brief set of pieces to introduce machine learning and other advancements to technical as well as non-technical audience. Written by the amazing people over at [a16z - Andreessen Horowitz](https://a16z.com/) this is a great link to forward to your managers or content for your presentations 
 * [Machine Learning Blog](https://bmcfee.github.io/#home) by Brian McFee
+* [Ruder's Blog](http://ruder.io/#open) by [Sebastian Ruder](https://twitter.com/seb_ruder) for commentary on the best of NLP Research
 
 Introductions and Guides to NLP
 * Ultimate Guide to [Understand & Implement Natural Language Processing](https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/)
 * [Introduction to NLP at Hackernoon](https://hackernoon.com/learning-ai-if-you-suck-at-math-p7-the-magic-of-natural-language-processing-f3819a689386) is for people who suck at math - in their own words
-* [NLP Tutorial](http://www.vikparuchuri.com/blog/natural-language-processing-tutorial/)
+* [NLP Tutorial by Vik Paruchari](http://www.vikparuchuri.com/blog/natural-language-processing-tutorial/)
+* [Natural Language Processing: An Introduction](http://jamia.oxfordjournals.org/content/18/5/544.short) by Oxford
 * [Deep Learning for NLP with Pytorch](http://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html)
 * [Hands-On NLTK Tutorial](https://github.com/hb20007/hands-on-nltk-tutorial) - The hands-on NLTK tutorial in the form of Jupyter notebooks
 
-Specialized Blogs
+
+Blogs and Newsletters
 * [Deep Learning, NLP, and Representations](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 * [Natural Language Processing Blog](http://nlpers.blogspot.ch/) by Hal Daumé III
-* Tensor Flow Tutorial on [Seq2Seq](https://www.tensorflow.org/tutorials/seq2seq/index.html) Models
-* Several [tutorials by Radim Řehůřek](https://radimrehurek.com/gensim/tutorial.html) on using Python and [gensim](https://radimrehurek.com/gensim/index.html) to process language corpora 
+* [Tutorials by Radim Řehůřek](https://radimrehurek.com/gensim/tutorial.html) on using Python and [gensim](https://radimrehurek.com/gensim/index.html) to process language corpora 
 * [arXiv: Natural Language Processing (Almost) from Scratch](http://arxiv.org/pdf/1103.0398.pdf)
-* [karpathy's The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness)
+* [Karpathy's The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness)
+* [Sebastian Ruder](http://ruder.io/#open)'s blog is focused on NLP Research
 
 ### Videos and Online Courses
 
@@ -81,10 +95,9 @@ Word embeddings, RNNs, LSTMs and CNNs for Natural Language Processing | [Back to
 * [Udacity's Intro to Artificial Intelligence](https://www.udacity.com/course/intro-to-artificial-intelligence--cs271) course which touches upon NLP as well
 * [Udacity's Deep Learning](https://classroom.udacity.com/courses/ud730) using Tensorflow which covers a section on using deep learning for NLP tasks (covering Word2Vec, RNN's and LSTMs)
 * [Deep Natural Language Processing at Oxford](https://github.com/oxford-cs-deepnlp-2017/lectures) has videos, lecture slides and reading material
-* [Deep Learning for Natural Language Processing (cs224*n* Winter 2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6) by Richard Socher and Christopher Manning at Stanford. Tensorflow. 
+* [Deep Learning for Natural Language Processing (cs224*n*)](web.stanford.edu/class/cs224n/) by Richard Socher and Christopher Manning at Stanford. Includes Videos, Assignments, Syllabus and other detailed material
 [Lecture Slides and Reading Material here](http://web.stanford.edu/class/cs224n/)
-* [Deep Learning for Natural Language Processing (cs224*d* 2016)](https://www.youtube.com/playlist?list=PLmImxx8Char9Ig0ZHSyTqGsdhb9weEGam) by Richard Socher. Updated to make use of Tensorflow. Some lectures missing. [Lecture Slides + Reading Materials](http://cs224d.stanford.edu/syllabus.html)
-* [Deep Learning for Natural Language Processing (cs224*d* 2015)](https://www.youtube.com/playlist?list=PLmImxx8Char8dxWB9LRqdpCTmewaml96q) by Richard Socher
+* [Coursera's Natural Language Processing](https://www.coursera.org/learn/language-processing) by National Research University Higher School of Economics
 
 #### Classical NLP
 Bayesian, statistics and Linguistics approaches for Natural Language Processing | [Back to Top](#contents)
@@ -97,6 +110,7 @@ Bayesian, statistics and Linguistics approaches for Natural Language Processing 
 
 * [Text Mining in R](https://www.tidytextmining.com)
 * [Natural Language Processing with Python](http://www.nltk.org/book/)
+* [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/)
 
 ## Libraries
 
@@ -117,11 +131,13 @@ Bayesian, statistics and Linguistics approaches for Natural Language Processing 
    * [gensim](https://radimrehurek.com/gensim/index.html) - Python library to conduct unsupervised semantic modelling from plain text :+1:
    * [scattertext](https://github.com/JasonKessler/scattertext) - Python library to produce d3 visualizations of how language differs between corpora
    * [AllenNLP](https://github.com/allenai/allennlp) - An NLP research library, built on PyTorch, for developing state-of-the-art deep learning models on a wide variety of linguistic tasks.
+   * [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - NLP research toolkit designed to support rapid prototyping with better data loaders, word vector loaders, neural network layer representations, common NLP metrics such as BLEU
    * [Rosetta](https://github.com/columbia-applied-data-science/rosetta) - Text processing tools and wrappers (e.g. Vowpal Wabbit)
    * [PyNLPl](https://github.com/proycon/pynlpl) - Python Natural Language Processing Library. General purpose NLP library for Python. Also contains some specific modules for parsing common NLP formats, most notably for [FoLiA](http://proycon.github.io/folia/), but also ARPA language models, Moses phrasetables, GIZA++ alignments.
    * [jPTDP](https://github.com/datquocnguyen/jPTDP) - A toolkit for joint part-of-speech (POS) tagging and dependency parsing. jPTDP provides pre-trained models for 40+ languages.
    * [BigARTM](https://github.com/bigartm/bigartm) - a fast library for topic modelling
    * [Snips NLU](https://github.com/snipsco/snips-nlu) - A production ready library for intent parsing
+   * [Chazutsu](https://github.com/chakki-works/chazutsu) - A library for downloading&parsing standard NLP research datasets
    
 
 * <a id="c++">**C++** - C++ Libraries</a> | [Back to Top](#contents)
@@ -200,20 +216,17 @@ Text embeddings allow deep learning to be effective on smaller datasets. These a
 The most popular names in word embeddings are word2vec by Google (Mikolov) and GloVe by Stanford (Pennington, Socher and Manning). fastText seems to be a fairly popular for multi-lingual sub-word embeddings. 
 
 
-#### word2vec
-word2vec was introduced by [T. Mikolov](https://scholar.google.com/citations?user=oBu8kMMAAAAJ&hl=en) et al. when he was with Google. 
-Performs well on word similarity and analogy tasks | [Back to Top](#contents)
+#### word2vec and GloVe
+**Don't use word2vec, don't use GloVe**. Use fastText vectors, which are much better from the same authors. word2vec was introduced by [T. Mikolov](https://scholar.google.com/citations?user=oBu8kMMAAAAJ&hl=en) et al. when he was with Google. 
+Performs well on word similarity and analogy tasks. | [Back to Top](#contents)
 
 * [Word2Vec Official Implementation](https://code.google.com/p/word2vec/)
 * [Deep Learning, NLP, and Representations](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)
 Chris Olah (2014), Beginner friendly blog explaining word2vec
 * [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781v3.pdf)
-* [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
-* [Word2Vec tutorial](http://tensorflow.org/tutorials/word2vec/index.html) in [TensorFlow](http://tensorflow.org/)
-* [gensim's Review of word2vec](http://rare-technologies.com/making-sense-of-word2vec/)
+* [Distributed Representations of Words and Phrases and their Compositionality](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf), [Word2Vec tutorial](http://tensorflow.org/tutorials/word2vec/index.html) in [TensorFlow](http://tensorflow.org/), [gensim's Review of word2vec](http://rare-technologies.com/making-sense-of-word2vec/)
 * [Word2Vec Resources on Github](https://github.com/clulab/nlp-reading-group/wiki/Word2Vec-Resources)
 
-#### GloVe
 GloVe was introduced by Pennington, Socher, Manning from Stanford in 2014 as a statistical approximation to word embeddings. The word vectors are created by matrix factorizations of word-word co-occurence matrices here  | [Back to Top](#contents)
 
 * [GloVe: Global vectors for word representation](http://nlp.stanford.edu/projects/glove/glove.pdf). Creates word vectors and relates word2vec to matrix factorizations 
@@ -242,6 +255,7 @@ fastText by Mikolov (from Facebook) supports sub-word embeddings in more than 20
 * [Adaptive skip-gram](http://arxiv.org/abs/1502.07257) - similar approach, with adaptive properties
 * [Sequence to Sequence Learning](http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf) - word vectors for machine translation
 * [Improving distributional similarity with lessons learned from word embeddings](https://tacl2013.cs.columbia.edu/ojs/index.php/tacl/article/viewFile/570/124)
+* [Deep Contextualized Word Represenations](https://arxiv.org/abs/1802.05365) - [PyTorch](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md) - [TF Implementation](https://github.com/allenai/bilm-tf)
 
 
 ### Thought Vectors
@@ -269,44 +283,37 @@ timesteps, thereby achieving strong performance in many text classification task
 * [arXiv: Sequence to Sequence Learning with Neural Networks](http://arxiv.org/pdf/1409.3215v3.pdf) Sutskever, Vinyals, Le 2014 proved the effectiivenss of **LSTM** for Machine Translation. Check their ([nips presentation](http://research.microsoft.com/apps/video/?id=239083))
 * [arXiv: Neural Machine Translation by jointly learning to align and translate](http://arxiv.org/pdf/1409.0473v6.pdf)
 Bahdanau, Cho 2014 introduced the **attention mechanism** in NLP
-* [arXiv: A Convolutional encoder model for neural machine translation](https://arxiv.org/pdf/1611.02344.pdf) by Gehring et al, 2017. The paper is from Facebook AI research and its code is available [here](https://github.com/facebookresearch/fairseq).
-* [Convolutional Sequence to Sequence learning](https://arxiv.org/pdf/1705.03122.pdf) by Gehring et al, 2017. The paper is from Facebook AI research and its code is available [here](https://github.com/facebookresearch/fairseq).
-* [Convolutional over Recurrent Encoder for neural machine translation](https://ufal.mff.cuni.cz/pbml/108/art-dakwale-monz.pdf) by Dakwale and Monz from University of Amsterdam compare the CNNs with a recurrent neural network with additional convolutonal layers.
-* Open Source code: [OpenNMT](http://opennmt.net/) is an open source initiative for neural machine translation and neural sequence modeling. It has a [PyTorch](https://github.com/OpenNMT/OpenNMT-py), [Tensorflow](https://github.com/OpenNMT/OpenNMT-tf) and the original [LuaTorch](https://github.com/OpenNMT/OpenNMT) implementation. 
+* [arXiv: A Convolutional encoder model for neural machine translation](https://arxiv.org/pdf/1611.02344.pdf) by Gehring et al, 2017. The paper is from Facebook AI research and its code is available [here](https://github.com/facebookresearch/fairseq)
+* [Convolutional Sequence to Sequence learning](https://arxiv.org/pdf/1705.03122.pdf) by Gehring et al, 2017. The paper is from Facebook AI research and its code is available [here](https://github.com/facebookresearch/fairseq)
+* [Convolutional over Recurrent Encoder for neural machine translation](https://ufal.mff.cuni.cz/pbml/108/art-dakwale-monz.pdf) by Dakwale and Monz from University of Amsterdam compare the CNNs with a recurrent neural network with additional convolutonal layers
+* Open Source code: [OpenNMT](http://opennmt.net/) is an open source initiative for neural machine translation and neural sequence modeling. [PyTorch](https://github.com/OpenNMT/OpenNMT-py), [Tensorflow](https://github.com/OpenNMT/OpenNMT-tf) and the original [LuaTorch](https://github.com/OpenNMT/OpenNMT) implementation 
 
-### Single Exchange Dialogs
+### Dialogs and Conversational 
 
 [Back to Top](#contents)
-
 * [A Neural Network Approach to Context-Sensitive Generation of Conversational Responses](http://arxiv.org/pdf/1506.06714v1.pdf)
-Sordoni 2015.  Generates responses to tweets. 
-  * Uses [Recurrent Neural Network Language Model (RLM) architecture
-of (Mikolov et al., 2010).](http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf). Source code: [RNNLM Toolkit](http://www.fit.vutbr.cz/~imikolov/rnnlm/index.html)
+Sordoni 2015. Generates responses to tweets. 
+  * Uses [Recurrent Neural Network Language Model (RLM) architecture of (Mikolov et al., 2010).](http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf). [Code of RNNLM Toolkit](http://www.fit.vutbr.cz/~imikolov/rnnlm/index.html)
   * RNNLM Tutorial: [Implementing RNN Language Models by Denny Britz](http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/)
-
 * [Neural Responding Machine for Short-Text Conversation](http://arxiv.org/pdf/1503.02364v2.pdf)
 Shang et al. 2015  Uses Neural Responding Machine.  Trained on Weibo dataset.  Achieves one round conversations with 75% appropriate responses.
-
 * [arXiv: A Neural Conversation Model](http://arxiv.org/pdf/1506.05869v3.pdf) Vinyals, [Le](https://scholar.google.com/citations?user=vfT6-XIAAAAJ) 2015.  Uses LSTM RNNs to generate conversational responses
 
 ### Memory and Attention Models 
 
 [Back to Top](#contents)
+Some are courtesy [andrewt3000/DL4NLP](https://github.com/andrewt3000/DL4NLP)
 
-Most are courtesy [andrewt3000/DL4NLP](https://github.com/andrewt3000/DL4NLP)
-* Interactive tutorial on [Augmented RNNs](www.distill.pub/2016/augmented-rnns/) including Attention and Memory networks
-* [Reasoning, Attention and Memory RAM workshop at NIPS 2015. slides included](http://www.thespermwhale.com/jaseweston/ram/)
+* Interactive tutorial on [Augmented RNNs](http://www.distill.pub/2016/augmented-rnns/) including Attention and Memory networks
+* [Annotated Transformer](http://nlp.seas.harvard.edu//2018/04/03/attention.html) from the [Attention is All You Need](https://arxiv.org/abs/1706.03762) work explains Tranformer implementation in line by line detail. Both links highly recommended.  
 * [Memory Networks](http://arxiv.org/pdf/1410.3916v10.pdf) Weston et. al 2014
 * [End-To-End Memory Networks](http://arxiv.org/pdf/1503.08895v4.pdf) Sukhbaatar et. al 2015
 Memory networks are implemented in [MemNN](https://github.com/facebook/MemNN).  Attempts to solve task of reason attention and memory
-* [Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks](http://arxiv.org/pdf/1502.05698v7.pdf)
-Weston 2015. Classifies QA tasks like single factoid, yes/no etc. Extends memory networks
-* [Evaluating prerequisite qualities for learning end to end dialog systems](http://arxiv.org/pdf/1511.06931.pdf)
-Dodge et. al 2015. Tests Memory Networks on 4 tasks including reddit dialog task
-* [Jason Weston lecture on MemNN](https://www.youtube.com/watch?v=Xumy3Yjq4zk)
+* [Reasoning, Attention and Memory RAM workshop at NIPS 2015. slides included](http://www.thespermwhale.com/jaseweston/ram/)
 * [Neural Turing Machines](http://arxiv.org/pdf/1410.5401v2.pdf), Graves et al. 2014
 * [Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets](http://arxiv.org/pdf/1503.01007v4.pdf), Joulin, Mikolov 2015 
 * [Stack RNN source code](https://github.com/facebook/Stack-RNN) and [blog post](https://research.facebook.com/blog/1642778845966521/inferring-algorithmic-patterns-with-stack/)
+
 
 ### Natural Language Understanding
 
@@ -370,23 +377,23 @@ Dodge et. al 2015. Tests Memory Networks on 4 tasks including reddit dialog task
 * [Using a CNN for text classification in TensorFlow](http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/) by Denny Britz uses the same dataset as Kim Yoon's paper(mentioned above). The code implementation can be found [here](https://github.com/dennybritz/cnn-text-classification-tf).
 * [Character-level Convolutional Networks for Text Classification](https://arxiv.org/pdf/1509.01626v3.pdf) by Zhang et al uses CNN and compares them with the traditional text classification models. Its Lua implementation can be found [here](https://github.com/zhangxiangxiao/Crepe).
 
-### Research and Review Articles
-
-[Back to Top](#contents)
-
-* [Deep Learning for Web Search and Natural Language Processing](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/wsdm2015.v3.pdf)
-* [Probabilistic topic models](https://www.cs.princeton.edu/~blei/papers/Blei2012.pdf)
-* [Natural language processing: an introduction](http://jamia.oxfordjournals.org/content/18/5/544.short)
-* [A unified architecture for natural language processing: Deep neural networks with multitask learning](http://arxiv.org/pdf/1201.0490.pdf)
-* [A Critical Review of Recurrent Neural Networks for Sequence Learning](http://arxiv.org/pdf/1506.00019v1.pdf)
-* [Deep parsing in Watson](http://nlp.cs.rpi.edu/course/spring14/deepparsing.pdf)
-* [Online named entity recognition method for microtexts in social networking services: A case study of twitter](http://arxiv.org/pdf/1301.2857.pdf)
-
 ## Datasets
 
 [Back to Top](#contents)
 
 * [nlp-datasets](https://github.com/niderhoff/nlp-datasets) great collection of nlp datasets
+
+## Implementations of various models
+
+[Back to Top](#contents)
+
+* [DeepNLP-models-Pytorch](https://github.com/DSKSD/DeepNLP-models-Pytorch) has Pytorch implementations of various deep NLP models used in CS224n(Stanford) in the form of Jupyter notebooks.The models are aimed for those who are acquainted with Pytorch.
+
+## Multilingual NLP Frameworks
+
+[Back to Top](#contents)
+* [UDPipe](https://github.com/ufal/udpipe) : Trainable pipeline for tokenizing, tagging, lemmatizing and parsing Universal Treebanks and other CoNLL-U file. Primarily written in C++, offers a fast and reliable solution for multilingual NLP processing.
+* [NLP-Cube](https://github.com/adobe/NLP-Cube) : Natural Language Processing Pipeline - Sentence Splitting, Tokenization, Lemmatization, Part-of-speech Tagging and Dependency Parsing. New platform, written in Python with Dynet 2.0. Offers standalone (CLI/Python bindings) and server functionality (REST API).
 
 ## NLP in Korean
 
@@ -421,7 +428,7 @@ Dodge et. al 2015. Tests Memory Networks on 4 tasks including reddit dialog task
 * [PyArabic](https://pypi.python.org/pypi/PyArabic/0.4) - Python libraries for Arabic
 
 ### Datasets
-
+* [Multidomain Datasets](https://github.com/hadyelsahar/large-arabic-sentiment-analysis-resouces) - Largest Available Multi-Domain Resources for Arabic Sentiment Analysis
 * [LABR](https://github.com/mohamedadaly/labr) - LArge Arabic Book Reviews dataset
 * [Arabic Stopwords](https://github.com/mohataher/arabic-stop-words) - A list of Arabic stopwords from various resources
 
@@ -434,6 +441,10 @@ Dodge et. al 2015. Tests Memory Networks on 4 tasks including reddit dialog task
  * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Python package for Words Segmentation Utilities in Chinese
  * [SnowNLP](https://github.com/isnowfy/snownlp) - Python package for Chinese NLP
  * [FudanNLP](https://github.com/FudanNLP/fnlp)- Java library for Chinese text processing
+
+## NLP in German
+
+ * [German-NLP](https://github.com/adbar/German-NLP) - Curated list of open-access/open-source/off-the-shelf resources and tools developed with a particular focus on German
  
 ## NLP in Spanish
 
@@ -475,9 +486,26 @@ Dodge et. al 2015. Tests Memory Networks on 4 tasks including reddit dialog task
 * [Inter-BEST](https://www.nectec.or.th/corpus/index.php?league=pm) - A text corpus with 5 million words with word segmentation
 * [Prime Minister 29](https://github.com/PyThaiNLP/lexicon-thai/tree/master/thai-corpus/Prime%20Minister%2029)- Dataset containing speeches of the current Prime Minister of Thailand
 
+## NLP in Vietnamese
+
+[Back to Top](#contents)
+
+### Libraries
+
+* [underthesea](https://github.com/magizbox/underthesea) - Vietnamese NLP Toolkit
+* [vn.vitk](https://github.com/phuonglh/vn.vitk) - A Vietnamese Text Processing Toolkit
+* [VnCoreNLP](https://github.com/vncorenlp/VnCoreNLP) - A Vietnamese natural language processing toolkit
+
+### Corpora
+
+* [Vietnamese treebank](https://vlsp.hpda.vn/demo/?page=resources&lang=en) - 10,000 sentences for the constituency parsing task
+* [BKTreeBank](https://arxiv.org/pdf/1710.05519.pdf) - a Vietnamese Dependency Treebank
+* [UD_Vietnamese](https://github.com/UniversalDependencies/UD_Vietnamese-VTB) - Vietnamese Universal Dependency Treebank
+* [VIVOS](https://ailab.hcmus.edu.vn/vivos/) - a free Vietnamese speech corpus consisting of 15 hours of recording speech by AILab
+* [VNTQcorpus(big).txt](http://viet.jnlp.org/download-du-lieu-tu-vung-corpus) - 1.75 million sentences in news
+
 ### Other Languages 
    * Russian: [pymorphy2](https://github.com/kmike/pymorphy2) - a good pos-tagger for Russian
-   * Vietnamese Treebank: [arXiv: BKTreeBank](https://arxiv.org/pdf/1710.05519.pdf)
    * Asian Languages: Thai, Lao, Chinese, Japanese, and Korean [ICU Tokenizer](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-icu-tokenizer.html) implementation in ElasticSearch
    * Ancient Languages: [CLTK](https://github.com/cltk/cltk): The Classical Language Toolkit is a Python library and collection of texts for doing NLP in ancient languages
    * Dutch: [python-frog](https://github.com/proycon/python-frog) - Python binding to Frog, an NLP suite for Dutch. (pos tagging, lemmatisation, dependency parsing, NER)
